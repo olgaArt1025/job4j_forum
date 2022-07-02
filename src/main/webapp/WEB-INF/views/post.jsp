@@ -18,7 +18,6 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
     <title>Форум job4j</title>
 </head>
 <body>
@@ -30,25 +29,21 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">№</th>
                 <th scope="col">Тема</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Дата</th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="post" items="${post}">
-                <tr>
-                    <td><c:out value="${post.id}"/></td>
-                    <td>
-                        <a href="<c:url value='/postDetails?id=${post.id}'/>">
-                            <i class="fa fa-file-text-o custom"></i>
-                        </a>
-                        <c:out value="${post.name}"/></td>
-                </tr>
-            </c:forEach>
+                <td>${post.name}</td>
+                <td>${post.description}</td>
+                <td>${post.created}</td>
             </tbody>
         </table>
-        <a button type="button" class="btn btn-outline-primary"
-           href="<c:url value='/create'/>">Создать новую тему</a>
+        <span>
+            <a class="btn btn-primary" href="<c:url value='/update?id=${post.id}'/>">Редактировать</a>
+            <a class="btn btn-primary" href="/" >Назад</a>
+         </span>
     </div>
 </div>
 
