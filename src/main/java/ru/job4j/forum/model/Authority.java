@@ -1,9 +1,15 @@
 package ru.job4j.forum.model;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "authorities")
 public class Authority {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String authority;
 
     public int getId() {
@@ -39,4 +45,3 @@ public class Authority {
         return Objects.hash(id);
     }
 }
-

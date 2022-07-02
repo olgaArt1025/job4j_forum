@@ -27,6 +27,14 @@
         <h4>Форум</h4>
     </div>
     <div class="row">
+        <div>
+            <p style="color:#9900ff">
+                Login as : ${user.username}
+                <h10>
+                    <a href="<c:url value='/logout'/>">Выйти</a>
+                </h10>
+            </p>
+        </div>
         <table class="table">
             <thead>
             <tr>

@@ -9,6 +9,7 @@
 </c:if>
 <form name='login' action="<c:url value='/login'/>" method='POST'>
     <table>
+        <a href="<c:url value='/reg'/>">Регистрация</a>
         <tr>
             <td>UserName:</td>
             <td><input type='text' name='username'></td>
