@@ -12,7 +12,6 @@ import java.util.Collection;
 
 @Repository
 public class PostMem {
-    private static final PostMem INST = new PostMem();
     private final AtomicInteger number = new AtomicInteger();
     private final Map<Integer, Post> posts = new ConcurrentHashMap<>();
 
@@ -21,10 +20,6 @@ public class PostMem {
                 LocalDate.of(2022, 4, 1)));
         posts.put(2, new Post(2, "Продаю машину ладу 02.", "Text2",
                 LocalDate.of(2022, 5, 1)));
-    }
-
-    public static PostMem instOf() {
-        return INST;
     }
 
     public Collection<Post> findAll() {
