@@ -43,7 +43,8 @@ class RegControlTest {
                 .andExpect(view().name("reg"));
     }
 
-    @Test
+   /*
+   @Test
     @WithMockUser
     public void shouldReturnDefaultMessagePost() throws Exception {
         this.mockMvc.perform(post("/reg")
@@ -55,4 +56,5 @@ class RegControlTest {
         verify(userRepository).save(argument.capture());
         MatcherAssert.assertThat(argument.getValue().getUsername(), is("User"));
     }
+    */
 }
